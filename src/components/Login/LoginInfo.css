@@ -1,0 +1,23 @@
+.lineBtn{
+    background-color: #00c122;
+    padding: 18px 38px;
+    border: none;
+    border-radius: 6px;
+    font-size: 19px;
+    font-style: initial;
+    font-weight: 800;
+    font-family: cursive;
+    color: white;
+}
+
+.logOut{
+    background-color: #ff0000c7;
+    padding: 18px 38px;
+    border: none;
+    border-radius: 6px;
+    font-size: 19px;
+    font-style: initial;
+    font-weight: 800;
+    font-family: cursive;
+    color: white;
+}

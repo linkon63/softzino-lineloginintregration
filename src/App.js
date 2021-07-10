@@ -1,18 +1,18 @@
-import './App.css';
+import { createContext, useState } from 'react';
+import liff from '@line/liff/dist/lib';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import './App.css';
 
-import LoginLine from './components/Login/LoginLine';
 import LoginInfo from './components/Login/LoginInfo';
 import User from './components/User/User';
-import { createContext, useState } from 'react';
 import Home from './components/Home/Home';
 import PrivateRoute from './components/Private/PrivateRoute';
-import liff from '@line/liff/dist/lib';
+
 
 export const UserContext = createContext();
 
