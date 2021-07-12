@@ -9,22 +9,36 @@ const LoginCustomer = () => {
             .then(data => setUser(data))
     }, [user]);
     return (
-        <div>
-            <h1>ALL USER</h1>
-            {
-                user? user?.map(u =>
-                    <div className="card">
-                        {/* <img src="img_avatar.png" alt="Avatar" style={{width:'100%'}} /> */}
-                        <div class="container1">
-                            <img src={u.pictureUrl} alt="" style={{width:'10%'}} />
-                            <h4><b>{u.displayName}</b></h4>
-                            <h4>UserID: {u.userId}</h4>
-                        </div>
-                    </div> ) :  
-                    <h1>Loading.............</h1> 
-                
-            }
-        </div>
+        <div className="userMain">
+
+                    <div>
+                        <h3>ALL USER</h3>
+                        {
+                            user? user?.map(u =>
+                                // <div className="card">
+                                //     {/* <img src="img_avatar.png" alt="Avatar" style={{width:'100%'}} /> */}
+                                //     <div className="container1">
+                                //         <img src={u.pictureUrl} alt="" style={{width:'10%'}} />
+                                //         <h4><b>{u.displayName}</b></h4>
+                                //         <h4>UserID: {u.userId}</h4>
+                                //     </div>
+                                // </div> 
+                                <div className="container">
+                                    <div class="service-details">
+                                        <img src={u.pictureUrl} alt="realm" />
+                                        <div class="service-hover-text">
+                                            <h3>{u.displayName}</h3>
+                                            <p> USER ID: {u.userId}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                )
+                            
+                                :  <h3>Loading.............</h3> 
+                            
+                        }
+                    </div>
+            </div>
     );
 };
 

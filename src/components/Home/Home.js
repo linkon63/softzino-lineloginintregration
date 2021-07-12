@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import LoginCustomer from '../LoginCustomer/LoginCustomer';
 import Navber from '../Shared/Navigation/Navber';
+import Design from '../Design/Design';
 
 const Home = () => {
     const [user, setUser] = useState([]);
@@ -26,10 +27,11 @@ const Home = () => {
 
             <div className='App'>
                 <h1 style={{ color: 'green' }}>WELCOME TO LINE MESSENGER</h1>
-                <Link to='/login'>
+                {/* <Link to='/login'>
                     <img src="https://i.ibb.co/hgqgD2Z/763-7634963-line-logo-png-line-logo-transparent-png-1.png" alt="Login" style={{ width: '15%' }} />
-                </Link>
+                </Link> */}
             </div>
+            <Design />
             {/* <LoginCustomer></LoginCustomer> */}
             {/* {
                 user?.map(us => <div>

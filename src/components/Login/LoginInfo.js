@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import liff from '@line/liff';
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 import { UserContext } from '../../App';
 import '../../App.css';
 import './LoginInfo.css';
 import Navber from '../Shared/Navigation/Navber';
+
 liff.init({liffId: "1656181485-PYVwNQ6K"});
 
 const LoginInfo = () => {
@@ -56,20 +59,29 @@ const LoginInfo = () => {
     return (
       <div>
         <Navber></Navber>
-                <div className="App">
-                <h1 style={{color:'green'}}>WELCOME TO LINE LOGIN</h1>
-                <button onClick={handleLogin} style={{border:'none', backgroundColor:'white'}}><img src="https://i.ibb.co/hgqgD2Z/763-7634963-line-logo-png-line-logo-transparent-png-1.png" alt="Login" style={{width:'70%'}} /></button>
-                
-                <br /><br />
+                {/* <div className="App">
+                  <h1 style={{color:'green'}}>WELCOME TO LINE LOGIN</h1>
+                  <button onClick={handleLogin} style={{border:'none', backgroundColor:'white'}}><img src="https://i.ibb.co/hgqgD2Z/763-7634963-line-logo-png-line-logo-transparent-png-1.png" alt="Login" style={{width:'70%'}} /></button>
+                  
+                  <br /><br />
 
-                <button onClick={showProfile} className="lineBtn">Show Profile Details</button>
-                <br />
-                <br />
-                <br />
-                <button onClick={handleLogOut} className='logOut' >Logout Line</button> <br />
-                
-
-            </div>
+                  <button onClick={showProfile} className="lineBtn">Show Profile Details</button>
+                  <br />
+                  <br />
+                  <br />
+                  <button onClick={handleLogOut} className='logOut' >Logout Line</button> <br />
+              </div> */}
+                <body>
+                <div className="main">
+                    <p className="sign" align="center">WELCOME LINE</p>
+                        <div className="form1" > 
+                            <button className="un " onClick={handleLogin}>LOGIN LINE</button>
+                            <button className="pass" onClick={showProfile}>SHOW PROFILE</button>
+                            <button onClick={handleLogOut} className='submit' >LOGOUT</button> <br />
+                            <p className="forgot" align="center"><a href="/home" />Forgot Password?</p>
+                        </div>
+                </div>
+             </body>
       </div>
     );
 };

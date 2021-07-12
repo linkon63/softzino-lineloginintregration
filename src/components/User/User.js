@@ -38,18 +38,18 @@ const User = () => {
                 <div className="">
                     <br /> <br />
                     <div>
-                        <button onClick={sendData} className="lineBtn">Send Data</button>
+                        <button onClick={sendData} className="submit">Send Data</button>
                     </div>
-                    <h1>USER DATA SHOW</h1>
-                    <h3>USER ID: {dataUser.userId}</h3>
-                    <h3>User Name : {dataUser.displayName}</h3>
+                    <h2>USER DATA SHOW</h2>
+                    <h4>USER ID: {dataUser.userId}</h4>
+                    <h4>User Name : {dataUser.displayName}</h4>
 
                     <h1 style={{ color: 'green' }}>CHAT WITH BOT</h1>
                     <a href="https://lin.ee/dghFawG"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/en.png" alt="Add friend" /></a>
                     <h4>BOT-ID: @310snrtx   ||   Or Scan Code</h4>
                     <img src="https://qr-official.line.me/sid/L/310snrtx.png" alt="" />
                 </div>
-                <div>
+                <div className="userMain">
                     <LoginCustomer></LoginCustomer>
                 </div>
             </div>
